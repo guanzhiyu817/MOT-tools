@@ -23,7 +23,7 @@ pip3 install cython_bbox
 
 ## Data preparation  
   
-Download [MOT17](https://motchallenge.net/data/MOT17/), [MOT20](https://motchallenge.net/data/MOT20/) and put them under <MOT-tools>/datasets in the following structure:  
+Download [MOT17](https://motchallenge.net/data/MOT17/), [MOT20](https://motchallenge.net/data/MOT20/), [DanceTrack](https://github.com/DanceTrack/DanceTrack) and put them under <MOT-tools>/datasets in the following structure:  
 ```  
 datasets  
 |——————MOT17  
@@ -31,7 +31,11 @@ datasets
 | └——————test  
 └——————MOT20  
 | └——————train  
-| └——————test  
+| └——————test
+└——————dancetrack        
+| └——————train
+| └——————val  
+| └——————test 
 ```
 
 ## Tools
@@ -44,6 +48,11 @@ python3 tools/convert_mot17_to_coco.py
 Converting MOT20 dataset to coco format
 ```shell  
 python3 tools/convert_mot20_to_coco.py
+```
+### convert_dance_to_coco.py
+Converting DanceTrack dataset to coco format
+```shell  
+python3 tools/convert_dance_to_coco.py
 ``` 
 ### convert_video.py
 Use the video xxx.mp4 to get xxx_converted.mp4, the new video file has the same size and frame rate as the original video
